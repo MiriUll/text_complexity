@@ -1,0 +1,12 @@
+torch==1.12.0
+pandas
+numpy
+nltk==3.7
+syllables
+matplotlib
+sklearn
+scipy
+transformers==4.5.1
+datasets==2.3.2
+sentencepiece
+spacy

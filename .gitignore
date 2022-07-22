@@ -1,0 +1,5 @@
+data/*
+.idea
+answer.csv
+answer.zip
+models/trainer
