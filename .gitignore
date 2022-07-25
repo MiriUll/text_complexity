@@ -3,3 +3,4 @@ data/*
 answer.csv
 answer.zip
 models/trainer
+models/distilbert_finetuned

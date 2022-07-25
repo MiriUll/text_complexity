@@ -8,7 +8,7 @@ from utils import get_df_with_statistics, TextComplexityDataset, eval_neural_mod
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-m', '--model_path', default='models/distilbert_finetuned', type=str,
+parser.add_argument('-m', '--model_path', default="MiriUll/distilbert-german-text-complexity", type=str,
                     help='Path to pretrained model')
 parser.add_argument('-d', '--data_path', default=training_data_path, type=str,
                     help='Path to data that should be evaluated')
