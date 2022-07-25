@@ -8,9 +8,9 @@ import matplotlib.pyplot as plt
 from scipy.interpolate import interp1d
 from sklearn.metrics import mean_squared_error, f1_score
 from zipfile import ZipFile
-from text_statistics import calculate_statistics
+from utils.text_statistics import calculate_statistics
 from transformers import EvalPrediction
-from settings import sentence_column, mos_column
+from utils.settings import sentence_column, mos_column
 
 
 class TextComplexityDataset(torch.utils.data.Dataset):

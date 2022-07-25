@@ -10,3 +10,4 @@ transformers==4.5.1
 datasets==2.3.2
 sentencepiece
 spacy
+shap

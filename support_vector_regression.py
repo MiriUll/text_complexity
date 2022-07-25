@@ -1,6 +1,6 @@
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVR
-from utils import load_data, rmse_mapped_direct, scatter_preds, write_answer_file, metric_eval
+from utils.utils import load_data, rmse_mapped_direct, scatter_preds, write_answer_file, metric_eval
 import joblib
 import argparse
 from utils.settings import *
