@@ -101,7 +101,7 @@ def write_answer_file(ids, preds):
     answer['MOS'] = preds
 
     answer.to_csv('answer.csv', index=False)
-    with ZipFile('answer.zip', 'w') as zipf:
+    with ZipFile('../answer.zip', 'w') as zipf:
         zipf.write('answer.csv', arcname='answer.csv')
 
 

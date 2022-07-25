@@ -3,7 +3,7 @@ from sklearn.svm import SVR
 from utils import load_data, rmse_mapped_direct, scatter_preds, write_answer_file, metric_eval
 import joblib
 import argparse
-from settings import *
+from utils.settings import *
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-n', '--no_neural_embedding', action='store_false', dest='neural_embedding',

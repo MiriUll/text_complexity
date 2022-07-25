@@ -1,10 +1,10 @@
 from transformers import TrainingArguments, Trainer
 from transformers import AutoTokenizer, DistilBertForSequenceClassification, DistilBertModel
-from settings import *
+from utils.settings import *
 import numpy as np
 import argparse
-from text_statistics import statistical_features
-from utils import get_df_with_statistics, TextComplexityDataset, eval_neural_model, write_answer_file
+from utils.text_statistics import statistical_features
+from utils.utils import get_df_with_statistics, TextComplexityDataset, eval_neural_model, write_answer_file
 
 
 parser = argparse.ArgumentParser()

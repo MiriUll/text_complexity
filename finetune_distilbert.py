@@ -1,9 +1,9 @@
 from transformers import TrainingArguments, Trainer
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
-from utils import rmse_mapped, write_answer_file, eval_neural_model
+from utils.utils import rmse_mapped, write_answer_file, eval_neural_model
 import datasets
-from settings import *
+from utils.settings import *
 import numpy as np
 import argparse
 
