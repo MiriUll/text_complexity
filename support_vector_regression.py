@@ -16,7 +16,7 @@ parser.add_argument('-f', '--predict_final', action='store_true',
                     help='Run predictions on final test data instead of validation data')
 parser.add_argument('-m', '--save_model_path', type=str, default=None,
                     help='Specify the path where trained model will be saved')
-parser.add_argument('-l', '--load_model_path', type=str, default='models/svr_distil_statistics.pkl',
+parser.add_argument('-l', '--load_model_path', type=str, default=combined_model_path,
                     help='Path to a pretrained model that should be used')
 parser.add_argument('-t', '--training_mode', action='store_true',
                     help='Specifies that a new model should be trained')
@@ -49,7 +49,10 @@ if args.training_mode:
         scatter_preds(y_test, y_pred_test, 'Test data')
 else:
     print('Load model from file')
-    clf = joblib.load(args.load_model_path)
+    if args.only_statistics:
+        clf = joblib.load(statistics_model_path)
+    else:
+        clf = joblib.load(args.load_model_path)
 
 print('Evaluating model')
 y_pred_train = clf.predict(X_train_vec)

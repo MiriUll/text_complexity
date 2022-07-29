@@ -6,24 +6,27 @@ import argparse
 import numpy as np
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-m', '--model_path', choices=['models/svr_distil_statistics.pkl', 'models/svr_statistics.pkl'],
+parser.add_argument('-c', '--combined', action='store_true',
                     help='Path to model which should be explained')
 parser.add_argument('-s', '--sample', action='store_true',
                     help='Sample data to boost performance')
 args = parser.parse_args()
+print(args)
 
 neural_embedding = True
-if args.model_path == 'models/svr_distil_statistics.pkl':
+if args.combined:
+    model_path = combined_model_path
     only_statistics = False
     embedding_dim = 768
     max_display = 10
-elif args.model_path == 'models/svr_statistics.pkl':
+else:
+    model_path = statistics_model_path
     only_statistics = True
     embedding_dim = 0
     max_display = 12
 
 print('Load model from file')
-clf = joblib.load(args.model_path)
+clf = joblib.load(model_path)
 
 print('Load training data')
 X_train_vec, _, _ = load_data(training_data_path, neural_embedding_path=training_feature_path,

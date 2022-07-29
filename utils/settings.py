@@ -4,7 +4,10 @@ validation_data_path = 'data/validation_set.csv'
 validation_feature_path = 'data/validation_set_distilbert_final.npy'
 final_test_path = 'data/part2_public.csv'
 final_test_feature_path = 'data/final_set_distilbert_final.npy'
+
 tfidf_vectorizer_path = 'models/wiki_tfidf.pkl'
+combined_model_path = 'models/svr_distil_statistics.pkl'
+statistics_model_path = 'models/svr_statistics.pkl'
 
 sentence_column = 'Sentence'
 mos_column = 'MOS'
