@@ -20,9 +20,15 @@ python support_vector_regression.py
 ```
 python support_vector_regression.py --only_statistics
 ```
-### Fine-tuned distilbert
+### Fine-tuned DistilBERT
 ```
 python eval_distilbert.py
+```
+
+### Create neural embeddingt with fine-tuned DistilBERT
+This will store `.npy` files with the embedding vectors of the training data in the data folder.
+```
+eval_distilbert.py --embedding 
 ```
 
 ## Generate explanations
