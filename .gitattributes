@@ -3,3 +3,4 @@ models/svr_statistics.pkl filter=lfs diff=lfs merge=lfs -text
 models/wiki_tfidf.pkl filter=lfs diff=lfs merge=lfs -text
 data/final_set_distilbert_final.npy filter=lfs diff=lfs merge=lfs -text
 data/training_set_balanced_distilbert_final.npy filter=lfs diff=lfs merge=lfs -text
+data/validation_set_distilbert_final.npy filter=lfs diff=lfs merge=lfs -text
