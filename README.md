@@ -6,7 +6,7 @@ Our SVR models were trained with Python 3.9.
 2. Setup Python 3.9 environment
 3. Install requirements with `pip install -r utils/requirements.txt`
 4. Download the spacy pipeline with `python -m spacy download de_core_news_sm`
-5. Download the Shared Task data either from the [competition homepage](https://codalab.lisn.upsaclay.fr/competitions/4964#participate) or the [original Github repository](https://github.com/babaknaderi/TextComplexityDE).
+5. The data used for training and evaluation is in the `data/` directory. You can download it either from the [competition homepage](https://codalab.lisn.upsaclay.fr/competitions/4964#participate) or the [original Github repository](https://github.com/babaknaderi/TextComplexityDE). For the later one, use the `ratings.csv` file and adapt the sentence and label column in the settings.
 6. Adap the paths and column names in `utils/settings.py` to your version of the data.
 
 ## Use pretrained models

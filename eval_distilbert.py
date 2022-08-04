@@ -35,7 +35,7 @@ feature_trainer = Trainer(model=pretrained, args=TrainingArguments('models/featu
 print('Load and tokenize data')
 data_df = get_df_with_statistics(args.data_path)
 data_tokenized = tokenizer(list(data_df[sentence_column]), padding='max_length', truncation=True, max_length=seq_max_len)
-data_complexity = TextComplexityDataset(data_tokenized, data_df, statistical_features, mos_column)
+data_complexity = TextComplexityDataset(data_tokenized, data_df, statistical_features, label_column)
 
 print('Run predictions')
 preds = feature_trainer.predict(test_dataset=data_complexity)

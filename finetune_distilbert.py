@@ -31,7 +31,7 @@ def tokenize_data(example):
 
 print('Load and tokenize training data')
 data = datasets.load_dataset('csv', data_files=training_data_path)
-data = data['train'].rename_columns({mos_column: 'label'})
+data = data['train'].rename_columns({label_column: 'label'})
 
 data = data.map(tokenize_data, batched=True)
 data = data.train_test_split(test_size=0.05)
