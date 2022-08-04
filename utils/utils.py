@@ -10,7 +10,7 @@ from sklearn.metrics import mean_squared_error, f1_score
 from zipfile import ZipFile
 from utils.text_statistics import calculate_statistics
 from transformers import EvalPrediction
-from utils.settings import sentence_column, mos_column
+from utils.settings import sentence_column, label_column
 
 
 class TextComplexityDataset(torch.utils.data.Dataset):
@@ -46,9 +46,9 @@ def get_df_with_statistics(df, from_file=True):
 
 def load_and_calc_statistics(df_path, balance_df=None, has_labels=True):
     df = pd.read_csv(df_path)
-    df_balanced = balance(df, balance_df, mos_column) if balance_df else df
+    df_balanced = balance(df, balance_df, label_column) if balance_df else df
     X = df_balanced[sentence_column]
-    y = df_balanced[mos_column].tolist() if has_labels else None
+    y = df_balanced[label_column].tolist() if has_labels else None
 
     statistics = calculate_statistics(df_balanced, sentence_column)
     statistics = sparse.hstack(list(statistics.values()))
