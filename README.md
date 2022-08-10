@@ -28,7 +28,7 @@ python eval_distilbert.py
 ### Create neural embeddingt with fine-tuned DistilBERT
 This will store `.npy` files with the embedding vectors of the training data in the data folder.
 ```
-eval_distilbert.py --embedding 
+python eval_distilbert.py --embedding 
 ```
 
 ## Generate explanations
