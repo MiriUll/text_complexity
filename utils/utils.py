@@ -125,11 +125,11 @@ def rmse_mapped_direct(y_true, y_pred):
 def rmse_mapped(preds: EvalPrediction):
     y_pred = preds.predictions[0].flatten()
     y_true = preds.label_ids
-    return rmse_mapped_direct(y_true, y_pred)
+    return {'rmse_mapped': rmse_mapped_direct(y_true, y_pred)}
 
 
 def eval_neural_model(y_pred, labels, visualisation=True, vis_title=''):
     print('\nRMSE:', metric_eval(labels, y_pred[0], classification=False))
-    print('RMSE mapped:', rmse_mapped(EvalPrediction(predictions=y_pred, label_ids=labels)))
+    print('RMSE mapped:', rmse_mapped(EvalPrediction(predictions=y_pred, label_ids=labels))['rmse_mapped'])
     if visualisation:
         scatter_preds(labels, y_pred[0], vis_title)
