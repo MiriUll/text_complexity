@@ -41,5 +41,5 @@ explainer = shap.KernelExplainer(clf.predict, X_train_vec)
 shap_values = explainer.shap_values(X_train_vec.tocsr())
 
 features_names = [f'distil_%i'%i for i in range(embedding_dim)] + \
-                 ['mtd', 'pc3', 'asl', 'pw6', 'ps1', 'asc', 'wstf1', 'wstf2', 'wstf3', 'wstf4', 'fre_amstad', 'SMOG']
+                 ['mtd', 'ps3', 'asl', 'pw6', 'ps1', 'asc', 'wstf1', 'wstf2', 'wstf3', 'wstf4', 'fre_amstad', 'SMOG']
 shap.summary_plot(shap_values, X_train_vec, feature_names=features_names, plot_type='bar', max_display=max_display)
