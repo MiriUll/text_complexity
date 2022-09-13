@@ -1,5 +1,5 @@
 # Text Complexity Assessment of German Text
-This repository contains the code for the TUM Social Computing team at the GermEval 2022 shared task.
+This repository contains the code for the [TUM Social Computing team at the GermEval 2022 shared task](https://aclanthology.org/2022.germeval-1.4/).
 Our SVR models were trained with Python 3.9.
 ## Setup
 1. Clone this repository
